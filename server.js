@@ -13,7 +13,7 @@
 const express = require("express");
 const path = require("path");
 const cors = require("cors");
-const dotenv = require('dotenv').config();
+require('dotenv').config();
 
 const app = express();
 const HTTP_PORT = process.env.PORT || 8080;
@@ -24,7 +24,7 @@ const db = new MoviesDB();
 
 
 
-
+app.use(bodyParser.json());
 app.use(express.json());
 app.use(cors());
 
