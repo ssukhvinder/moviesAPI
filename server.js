@@ -1,26 +1,9 @@
-const express = require("express");
-const path = require("path");
-const cors = require("cors");
-const dotenv = require('dotenv').config();
-
-const app = express();
-const HTTP_PORT = process.env.PORT || 8080;
-
-const MoviesDB = require("./modules/moviesDB.js");
-const db = new MoviesDB();
-
-
-
-//support incoming JSON entities
-
-app.use(express.json());
 
 // Installed packages 
 const express = require("express");
 const path = require("path");
 const cors = require("cors");
 const bodyParser = require('body-parser');
-const dotenv = require('dotenv').config();
 const app = express()
 
 require('dotenv').config({path: "./keys.env"}); 
