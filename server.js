@@ -17,6 +17,7 @@ require('dotenv').config();
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose')
 const MoviesDB = require("./modules/moviesDB.js");
+const { default: mongoose } = require('mongoose');
 const db = new MoviesDB();
 const app = express();
 const HTTP_PORT = process.env.PORT || 8080;
